@@ -283,6 +283,7 @@ func (s *tikvStore) Begin() (kv.Transaction, error) {
 	if err != nil {
 		return nil, errors.Trace(err)
 	}
+	logutil.BgLogger().Info("hello transaction")
 	return txn, nil
 }
 
